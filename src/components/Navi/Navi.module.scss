@@ -1,0 +1,157 @@
+@import "../../variables.scss";
+
+.Navi {
+  position: relative;
+  width: 100%;
+  padding: 3rem 0 2rem 0;
+}
+
+.navi__list {
+  width: 100%;
+
+  @include reset-list;
+}
+
+.navi__item {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: calc((100% - 2 * 2rem) / 3);
+  border-bottom: 0;
+  padding-bottom: 0.5rem;
+  text-align: center;
+
+  // Anchor with icon
+  & > a {
+    display: block;
+    margin-bottom: 0.1rem;
+    font-size: $font-sm;
+  }
+
+  &:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  &::after {
+    transition: all 1s;
+    content: "";
+    background: $white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0px;
+  }
+
+  transition: all 1s ease;
+  &:hover .navi__content::after {
+    width: 100%;
+
+    @include clear-fix;
+  }
+  &:hover .navi__content {
+    width: 100%;
+  }
+
+  &:hover .navi__arrow {
+    @include clear-fix;
+    @include flicker(inherit, $pink);
+  }
+}
+
+// Checkbox
+.navi__checkbox {
+  &:checked + .navi__title > .navi__arrow {
+    transform: rotate(0deg);
+  }
+  &:checked ~ .navi__content {
+    height: 15rem;
+    width: 100%;
+  }
+  &:checked ~ .navi__content > .navi__img {
+    width: 80%;
+  }
+}
+
+// Paragraph with title
+.navi__title {
+  cursor: inherit;
+  font-size: $font-xs;
+  text-transform: uppercase;
+}
+.navi__arrow {
+  transition: transform 1s;
+  @include clear-fix;
+  margin-left: 0.1rem;
+  display: inline-block;
+  font-size: inherit;
+  transform: rotate(-90deg);
+}
+.navi__content {
+  transition: all 1s;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0.1rem;
+  background-color: rgba($white, 0.4);
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  overflow: hidden;
+
+  &::after {
+    transition: all 1s;
+    content: "";
+    background: $white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 100%;
+  }
+}
+
+.navi__img {
+  position: relative;
+  transition: all 1s;
+  display: block;
+  margin: 0 auto;
+  width: 0%;
+  margin-top: 1rem;
+
+  & > img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  &::after {
+    transition: all 0.5s;
+    z-index: 2;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $font-sm;
+    font-weight: $font-weight-lg;
+  }
+  &:hover::after {
+    color: $white;
+    background-color: rgba($pink, 0.5);
+  }
+}
+.navi__img__portfolio2 {
+  &::after {
+    content: "Portfolio 2";
+  }
+}

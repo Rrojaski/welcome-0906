@@ -1,0 +1,20 @@
+@import "../../variables.scss";
+
+.Header {
+  display: block;
+  font-size: $font-md;
+  color: $white;
+  font-weight: 800;
+  line-height: 7rem;
+}
+
+.xl {
+  font-size: $font-xl;
+  white-space: nowrap;
+}
+.lg {
+  font-size: $font-lg;
+}
+.sm {
+  font-size: $font-sm;
+}

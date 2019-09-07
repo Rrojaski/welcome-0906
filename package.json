@@ -1,0 +1,47 @@
+{
+  "name": "welcome-0906",
+  "version": "0.1.0",
+  "private": true,
+  "description": "welcome app greats the user with fancy animations and usefull information",
+  "main": "index.js",
+  "dependencies": {
+    "babel-eslint": "10.0.1",
+    "dotenv": "^8.1.0",
+    "node-sass": "4.12.0",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-scripts": "3.0.1",
+    "styled-components": "4.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rrojaski/welcome-0906.git"
+  },
+  "author": "Roamn Rojas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rrojaski/welcome-0906/issues"
+  },
+  "homepage": "https://github.com/Rrojaski/welcome-0906#readme",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

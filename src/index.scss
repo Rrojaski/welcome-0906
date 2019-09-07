@@ -1,0 +1,50 @@
+@import "variables.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(phone) {
+    html {
+      font-size: 50%;
+    }
+  }
+  @include respond(tab-port) {
+    html {
+      font-size: 60%;
+    }
+  }
+  @include respond(tab-land) {
+    html {
+      font-size: 70%;
+    }
+  }
+  @include respond(desk-big) {
+    html {
+      font-size: 80%;
+    }
+  }
+}
+
+body {
+  color: $white;
+  font-family: "Lato", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $white;
+}

@@ -1,0 +1,19 @@
+@import "../../variables.scss";
+
+.Weather {
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -20%);
+
+  // Mod p
+  & > p {
+    line-height: $line-height-md;
+  }
+}
+.weather__icon {
+  font-size: $font-xl;
+  font-weight: $font-weight-lg;
+}

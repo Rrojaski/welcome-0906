@@ -1,0 +1,17 @@
+@import "../../variables.scss";
+
+.Paragraph {
+  line-height: $line-height-md;
+  font-size: $font-sm;
+  font-weight: $font-weight-lg;
+}
+
+.xl {
+  font-size: $font-lg;
+}
+.lg {
+  font-size: $font-md;
+}
+.sm {
+  font-size: $font-xs;
+}
