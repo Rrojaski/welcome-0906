@@ -48,7 +48,7 @@ class App extends Component {
             <Row className="u-align-center">
               <Col size="col-1-of-2">
                 <Header className="" size="xl">
-                  Welocome!
+                  Welcome!
                 </Header>
               </Col>
               <Col size="col-1-of-2">
