@@ -22,7 +22,7 @@ const Head = (props) => {
             &nbsp;
           </Col>
           <Col className='header__item__right' size='col-1-of-3'>
-            <Navi toggle={props.toggle} />
+            <Navi />
           </Col>
         </Row>
       </div>

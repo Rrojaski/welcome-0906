@@ -8,13 +8,16 @@
   width: 40rem;
   height: 40rem;
   @include absolute-center;
-  transform: translate(50%, -50%);
-  display: none;
-  @include fade(fade);
+  transform: translate(150%, -50%);
+  opacity: 0;
   transition: all 0.8s;
   &:target {
-    @include fade(show);
+    opacity: 1;
     transform: translate(-50%, -50%);
+
+    & > .youtube__video {
+      display: block;
+    }
   }
 }
 .youtube__close {
@@ -31,6 +34,7 @@
   }
 }
 .youtube__video {
+  display: none;
   border-radius: inherit;
   @include absolute-center;
   width: auto;

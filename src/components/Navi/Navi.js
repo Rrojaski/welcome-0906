@@ -57,7 +57,7 @@ const Navi = props => {
               <i className={`${styles.navi__arrow}`}>▼</i>
             </label>
             <div className={`${styles.navi__content} ${styles.navi__content__cool}`}>
-              <a href='./#youtube' onClick={props.toggle} className={`${styles.navi__img} ${styles.navi__img__heMan} ${'u-reset-anchor'}`}><img src={heMan} /></a>
+              <a href='./#youtube' className={`${styles.navi__img} ${styles.navi__img__heMan} ${'u-reset-anchor'}`}><img src={heMan} /></a>
             </div>
           </li>
         </ul>
