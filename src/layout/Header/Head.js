@@ -14,7 +14,7 @@ const Head = props => {
             <div className={`${styles.head__left}`}>
               <Paragraph size="md">
                 <a
-                  href="mailto:904-271-5715"
+                  href="tel:904-271-5715"
                   className={`${styles["u-reset-anchor"]}`}
                 >
                   <span>Call</span> +1 904 - 271 - 5715
@@ -24,7 +24,7 @@ const Head = props => {
             <div className={`${styles.head__right}`}>
               <Paragraph size="md">
                 <a
-                  href="email:rrojaski@gmail.com"
+                  href="mailto:rrojaski@gmail.com"
                   className={`${styles["u-reset-anchor"]}`}
                 >
                   <span>Email</span> rrojaski@gmail.com
