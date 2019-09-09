@@ -11,7 +11,7 @@
 
 .head__box {
   width: 100%;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   border-bottom: 1px solid rgba($white, 0.4);
 }
 
@@ -20,4 +20,12 @@
 }
 .head__right {
   float: right;
+}
+
+@include respond(phone) {
+  .head__left,
+  .head__right {
+    float: none;
+    display: block;
+  }
 }

@@ -1,37 +1,36 @@
 import React, { useEffect, useState, Fragment, Component } from "react";
 
-
 // Components
 import BackVideo from "./components/BackVideo/BackVideo";
 import Header from "./components/Header/Header";
-import { Row, Col } from './components/Grid/Grid';
-import Navi from './components/Navi/Navi';
-import Head from './layout/Header/Head';
-import Weather from './components/Weather/Weather';
-import Youtube from './components/Youtube/Youtube';
+import { Row, Col } from "./components/Grid/Grid";
+import Navi from "./components/Navi/Navi";
+import Head from "./layout/Header/Head";
+import Weather from "./components/Weather/Weather";
+import Youtube from "./components/Youtube/Youtube";
 
 import "./App.scss";
 import "./variables.scss";
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      display: 'hide'
-    }
+      display: "hide"
+    };
     this.toggle = this.toggle.bind(this);
   }
 
   toggle() {
-    if (this.state.display === 'hide') {
+    if (this.state.display === "hide") {
       this.setState({
-        display: 'show'
-      })
+        display: "show"
+      });
     } else {
       this.setState({
-        display: 'hide'
-      })
+        display: "hide"
+      });
     }
   }
 
@@ -44,15 +43,15 @@ class App extends Component {
       <Fragment>
         <div className="App">
           <BackVideo>
-
             <Youtube display={this.state.display} toggle={this.toggle} />
             <Head toggle={this.toggle} />
-            <Row className='u-align-center'>
-              <Col size='col-1-of-2'>
-                <Header className="" size='lg'>Welcome Back,</Header>
-                <Header className="" size='xl'>Roman</Header>
+            <Row className="u-align-center">
+              <Col size="col-1-of-2">
+                <Header className="" size="xl">
+                  Welocome!
+                </Header>
               </Col>
-              <Col size='col-1-of-2'>
+              <Col size="col-1-of-2">
                 <Weather />
               </Col>
             </Row>
@@ -60,9 +59,7 @@ class App extends Component {
         </div>
       </Fragment>
     );
-
   }
 }
-
 
 export default App;

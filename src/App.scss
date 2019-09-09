@@ -7,28 +7,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  font-size: 62.5%;
 
-  @include respond(phone) {
-    font-size: 50%;
-  }
-  @include respond(tab-land) {
-    font-size: 60%;
-  }
-  @include respond(tab-port) {
-    font-size: 70%;
-  }
-  @include respond(desk-big) {
-    font-size: 80%;
-  }
-}
 body {
+  overflow: hidden;
   color: $white;
   font-family: "Roboto", sans-serif;
 }
 .App {
-  overflow: hidden;
   width: 100%;
   height: 100vh;
   text-align: center;

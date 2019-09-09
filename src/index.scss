@@ -11,30 +11,23 @@
 html {
   font-size: 62.5%;
 
-  @include respond(phone) {
-    html {
-      font-size: 50%;
-    }
-  }
-  @include respond(tab-port) {
-    html {
-      font-size: 60%;
-    }
+  @include respond(desk-big) {
+    font-size: 80%;
+    overflow: hidden;
   }
   @include respond(tab-land) {
-    html {
-      font-size: 70%;
-    }
+    font-size: 70%;
   }
-  @include respond(desk-big) {
-    html {
-      font-size: 80%;
-      overflow: hidden;
-    }
+  @include respond(tab-port) {
+    font-size: 60%;
+  }
+  @include respond(phone) {
+    font-size: 50%;
   }
 }
 
 body {
+  width: 100%;
   color: $white;
   font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -42,7 +35,8 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 ::selection {

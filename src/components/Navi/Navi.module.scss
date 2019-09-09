@@ -4,6 +4,10 @@
   position: relative;
   width: 100%;
   padding: 3rem 0 2rem 0;
+
+  @include respond(tab-port) {
+    padding: 3rem 2rem 2rem 2rem;
+  }
 }
 
 .navi__list {
@@ -25,7 +29,7 @@
   & > a {
     display: block;
     margin-bottom: 0.1rem;
-    font-size: $font-sm;
+    font-size: $font-md;
   }
 
   &:not(:last-child) {
@@ -59,7 +63,16 @@
     @include flicker(inherit, $pink);
   }
 }
-
+.navi__title p {
+  display: inline-block;
+  font-size: $font-xs;
+  @include respond(tab-port) {
+    font-size: $font-sm;
+  }
+  @include respond(phone) {
+    font-size: $font-xs;
+  }
+}
 // Checkbox
 .navi__checkbox {
   &:checked + .navi__title > .navi__arrow {
@@ -76,17 +89,44 @@
 .navi__checkbox__portfolio {
   &:checked ~ .navi__content {
     height: 8rem;
+    @include respond(tab-land) {
+      height: 8rem;
+    }
+    @include respond(tab-port) {
+      height: 18rem;
+    }
+    @include respond(phone) {
+      height: 12rem;
+    }
   }
 }
 .navi__checkbox__work {
   &:checked ~ .navi__content {
     height: 8rem;
+    @include respond(tab-land) {
+      height: 8rem;
+    }
+    @include respond(tab-port) {
+      height: 18rem;
+    }
+    @include respond(phone) {
+      height: 12rem;
+    }
   }
 }
 
 .navi__checkbox__cool {
   &:checked ~ .navi__content {
     height: 8rem;
+    @include respond(tab-land) {
+      height: 8rem;
+    }
+    @include respond(tab-port) {
+      height: 18rem;
+    }
+    @include respond(phone) {
+      height: 12rem;
+    }
   }
 }
 
@@ -163,12 +203,17 @@
   }
   &:hover::after {
     color: $white;
-    background-color: rgba($pink, 0.5);
+    background-color: rgba($black, 0.5);
   }
 }
 .navi__img__portfolio2 {
   &::after {
     content: "Portfolio 2";
+  }
+  &:hover::after {
+    color: $white;
+
+    background-color: rgba($blue, 0.5);
   }
 }
 
@@ -176,9 +221,18 @@
   &::after {
     content: "Anime Shop";
   }
+  &:hover::after {
+    color: $white;
+
+    background-color: rgba($purple, 0.5);
+  }
 }
 .navi__img__heMan {
   &::after {
     content: "He Man";
+  }
+  &:hover::after {
+    color: $white;
+    background-color: rgba($pink, 0.5);
   }
 }

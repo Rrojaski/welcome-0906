@@ -3,8 +3,10 @@ $white: #fff;
 $black: #000;
 $red: #df2408;
 $pink: #fc66cc;
+$blue: rgb(26, 115, 232);
+$purple: rgb(65, 0, 153);
 
-$color-primary: #2477f3;
+$color-primary: #030405;
 
 $color-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
 
@@ -103,13 +105,8 @@ $gutter-vertical: 3rem;
 
 // Media query funtion
 @mixin respond($breakpoint) {
-  @if $breakpoint == phone {
-    @media (max-width: 37.5em) {
-      @content;
-    }
-  }
-  @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) {
+  @if $breakpoint == desk-big {
+    @media (min-width: 112.5em) {
       @content;
     }
   }
@@ -118,8 +115,13 @@ $gutter-vertical: 3rem;
       @content;
     }
   }
-  @if $breakpoint == desk-big {
-    @media (min-width: 112.5em) {
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
       @content;
     }
   }

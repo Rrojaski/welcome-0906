@@ -1,12 +1,12 @@
 @import "../../variables.scss";
 
 .Youtube {
-  background: darken($white, 10%);
+  background: rgba($black, 0.8);
   z-index: 3;
   border-radius: 3px;
   box-shadow: $color-shadow;
   width: 40rem;
-  height: 40rem;
+  height: 30rem;
   @include absolute-center;
   transform: translate(150%, -50%);
   opacity: 0;
@@ -19,12 +19,26 @@
       display: block;
     }
   }
+
+  @include respond(tab-land) {
+    transform: translate(130%, -50%);
+  }
+  @include respond(tab-port) {
+    transform: translate(80%, -50%);
+    width: 40rem;
+    height: 30rem;
+  }
+  @include respond(phone) {
+    transform: translate(55%, -50%);
+    width: 30rem;
+    height: 20rem;
+  }
 }
 .youtube__close {
   @include reset-anchor;
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: 1rem;
+  right: 1rem;
   text-transform: capitalize;
   font-family: sans-serif;
   font-size: $font-md;
@@ -32,11 +46,14 @@
   &:hover {
     color: $pink;
   }
+  @include respond(phone) {
+    font-size: $font-sm;
+  }
 }
 .youtube__video {
   display: none;
   border-radius: inherit;
   @include absolute-center;
-  width: auto;
+  width: 80%;
   height: 70%;
 }

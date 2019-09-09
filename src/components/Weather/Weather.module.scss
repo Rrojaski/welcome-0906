@@ -12,8 +12,31 @@
   & > p {
     line-height: $line-height-md;
   }
+
+  @include respond(tab-port) {
+    transform: translate(-50%, -50%);
+    .weather__icon {
+      display: block;
+      margin: 0 auto;
+      width: 10rem;
+      //transform: translate(2rem, 2rem);
+      height: auto;
+    }
+
+    & > * {
+      text-align: center;
+    }
+  }
 }
 .weather__icon {
+  width: 10rem;
+  transform: translate(0.5rem, 0rem);
+  height: auto;
+
+  /*
+  old weather icon
+
   font-size: $font-xl;
   font-weight: $font-weight-lg;
+  */
 }
