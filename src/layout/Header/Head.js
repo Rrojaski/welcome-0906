@@ -19,10 +19,10 @@ const Head = (props) => {
         </div>
         <Row>
           <Col className='header__item__left' size='col-2-of-3'>
-          &nbsp;
+            &nbsp;
           </Col>
           <Col className='header__item__right' size='col-1-of-3'>
-            <Navi />
+            <Navi toggle={props.toggle} />
           </Col>
         </Row>
       </div>

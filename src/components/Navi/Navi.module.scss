@@ -66,11 +66,27 @@
     transform: rotate(0deg);
   }
   &:checked ~ .navi__content {
-    height: 15rem;
     width: 100%;
   }
   &:checked ~ .navi__content > .navi__img {
     width: 80%;
+  }
+}
+
+.navi__checkbox__portfolio {
+  &:checked ~ .navi__content {
+    height: 8rem;
+  }
+}
+.navi__checkbox__work {
+  &:checked ~ .navi__content {
+    height: 8rem;
+  }
+}
+
+.navi__checkbox__cool {
+  &:checked ~ .navi__content {
+    height: 8rem;
   }
 }
 
@@ -153,5 +169,16 @@
 .navi__img__portfolio2 {
   &::after {
     content: "Portfolio 2";
+  }
+}
+
+.navi__img__anime {
+  &::after {
+    content: "Anime Shop";
+  }
+}
+.navi__img__heMan {
+  &::after {
+    content: "He Man";
   }
 }

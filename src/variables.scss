@@ -6,6 +6,8 @@ $pink: #fc66cc;
 
 $color-primary: #2477f3;
 
+$color-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+
 // Font Size
 $font-xxl: 10rem;
 $font-xl: 7rem;
@@ -137,6 +139,38 @@ $gutter-vertical: 3rem;
     }
     100% {
       color: $color2;
+    }
+  }
+}
+
+@mixin fade($direction) {
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  @if ($direction == fade) {
+    animation-name: fade;
+    @keyframes fade {
+      0% {
+        display: block;
+      }
+      90% {
+        display: block;
+      }
+      100% {
+        display: none;
+      }
+    }
+  }
+  @if ($direction == show) {
+    animation-name: show;
+    @keyframes show {
+      0% {
+        display: none;
+      }
+      100% {
+        display: block;
+      }
     }
   }
 }

@@ -28,7 +28,6 @@
   "bugs": {
     "url": "https://github.com/Rrojaski/welcome-0906/issues"
   },
-  "homepage": "https://github.com/Rrojaski/welcome-0906#readme",
   "eslintConfig": {
     "extends": "react-app"
   },

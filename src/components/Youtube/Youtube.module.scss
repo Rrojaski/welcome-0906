@@ -1,0 +1,38 @@
+@import "../../variables.scss";
+
+.Youtube {
+  background: darken($white, 10%);
+  z-index: 3;
+  border-radius: 3px;
+  box-shadow: $color-shadow;
+  width: 40rem;
+  height: 40rem;
+  @include absolute-center;
+  transform: translate(50%, -50%);
+  display: none;
+  @include fade(fade);
+  transition: all 0.8s;
+  &:target {
+    @include fade(show);
+    transform: translate(-50%, -50%);
+  }
+}
+.youtube__close {
+  @include reset-anchor;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  font-size: $font-md;
+  color: $black;
+  &:hover {
+    color: $pink;
+  }
+}
+.youtube__video {
+  border-radius: inherit;
+  @include absolute-center;
+  width: auto;
+  height: 70%;
+}

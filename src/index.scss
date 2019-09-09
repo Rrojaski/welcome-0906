@@ -29,6 +29,7 @@ html {
   @include respond(desk-big) {
     html {
       font-size: 80%;
+      overflow: hidden;
     }
   }
 }
