@@ -1,12 +1,18 @@
 @import "../../variables.scss";
 
 .Head {
+  z-index: 4;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
 
   @include clear-fix;
+
+  // Used to fix font overlay on small device
+  @include respond(phone) {
+      background-color: rgba($black, .2);
+  }
 }
 
 .head__box {

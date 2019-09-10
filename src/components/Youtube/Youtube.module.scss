@@ -2,7 +2,7 @@
 
 .Youtube {
   background: rgba($black, 0.8);
-  z-index: 3;
+  z-index: 4;
   border-radius: 3px;
   box-shadow: $color-shadow;
   width: 40rem;
@@ -29,7 +29,7 @@
     height: 30rem;
   }
   @include respond(phone) {
-    transform: translate(55%, -50%);
+    transform: translate(40%, -50%);
     width: 40rem;
     height: 30rem;
   }
